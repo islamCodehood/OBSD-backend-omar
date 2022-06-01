@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {Entity, BaseEntity, Column, PrimaryGeneratedColumn, ManyToOne, JoinColumn, ManyToMany} from "typeorm"
 import { Category } from "./Category";
 import { Order } from "./Order";
@@ -28,4 +29,36 @@ export class OrderLine extends BaseEntity {
     
 
     
+=======
+import {Entity, BaseEntity, Column, PrimaryGeneratedColumn, ManyToOne, JoinColumn, ManyToMany} from "typeorm"
+import { Category } from "./Category";
+import { Order } from "./Order";
+import { Product } from "./Product"
+
+@Entity('orderLine')//to save it in the database in this case left empty cuz we won't be saving it there , not needed
+export class OrderLine extends BaseEntity {
+    @PrimaryGeneratedColumn()
+    id:number;
+    
+    @Column()
+    quantity: number;
+    
+    @ManyToOne(
+        () => Order,
+        order => order.orderline    
+    )
+    @JoinColumn()
+    order: Order;
+
+    @ManyToOne(
+        () => Product,
+         product => product.orderline
+    )
+    @JoinColumn()
+    product:Product;
+
+    
+
+    
+>>>>>>> a31134411f04b6fc26e2b6bc2df67123841ebd68
 }

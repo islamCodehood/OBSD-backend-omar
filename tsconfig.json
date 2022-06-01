@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "compilerOptions": {
        "target": "es6",
@@ -15,4 +16,23 @@
     }
  }
 
+=======
+{
+    "compilerOptions": {
+       "target": "es6",
+       "lib": [
+          "es5",
+          "es6"
+       ],
+       "module": "commonjs",
+       "moduleResolution": "node",
+       "outDir": "./dist/",
+       "emitDecoratorMetadata": true,
+       "experimentalDecorators": true,
+       "sourceMap": true,
+       "esModuleInterop": true,
+    }
+ }
+
+>>>>>>> a31134411f04b6fc26e2b6bc2df67123841ebd68
  
