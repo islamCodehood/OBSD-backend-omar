@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {Entity, BaseEntity, Column, PrimaryGeneratedColumn, OneToMany, CreateDateColumn} from "typeorm"
 import { OrderLine } from "./OrderLine";
 
@@ -33,40 +32,4 @@ export class Order extends BaseEntity {
 
     @CreateDateColumn()
     created_at:Date;
-=======
-import {Entity, BaseEntity, Column, PrimaryGeneratedColumn, OneToMany, CreateDateColumn} from "typeorm"
-import { OrderLine } from "./OrderLine";
-
-@Entity('order')
-export class Order extends BaseEntity {
-    @PrimaryGeneratedColumn()
-    id:number;
-
-    @Column()
-    name:string;
-
-    @Column()
-    mobile:string;
-
-    @Column()
-    address:string
-
-    @Column()
-    city:string;
-
-    @Column()
-    totalPrice: number
-
-    @OneToMany(
-        () => OrderLine,
-        orderline => orderline.order
-    )
-    orderline: OrderLine[];
-
-    @Column({default:false})
-    completed: boolean;
-
-    @CreateDateColumn()
-    created_at:Date;
->>>>>>> a31134411f04b6fc26e2b6bc2df67123841ebd68
 }
